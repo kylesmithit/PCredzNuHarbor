@@ -1,3 +1,10 @@
+This fork disables SNMP extraction for use on specific engagements where SNMP was casuing hundreds of lines of found strings.
+
+
+
+
+
+-------------------------------------------------------------------------
 # PCredz
 
 This tool extracts Credit card numbers, NTLM(DCE-RPC, HTTP, SQL, LDAP, etc), Kerberos (AS-REQ Pre-Auth etype 23), HTTP Basic, SNMP, POP, SMTP, FTP, IMAP, etc from a pcap file or from a live interface.
