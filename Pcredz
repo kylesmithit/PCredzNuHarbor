@@ -421,14 +421,14 @@ def ParseDataRegex(decoded, SrcPort, DstPort, packet_num):
                 l.warning(Message[0])
                 print HeadMessage+'\n'+Message[0]
 
-    if DstPort == 161:
-        Message = ParseSNMP(decoded['data'][8:])
-        if Message:
-            HeadMessage = Print_Packet_Details(decoded,SrcPort,DstPort,packet_num)
-            if PrintPacket(Filename,Message):
-                l.warning(HeadMessage)
-                l.warning(Message)
-                print HeadMessage+'\n'+Message
+#    if DstPort == 161:
+#        Message = ParseSNMP(decoded['data'][8:])
+#        if Message:
+#            HeadMessage = Print_Packet_Details(decoded,SrcPort,DstPort,packet_num)
+#            if PrintPacket(Filename,Message):
+#                l.warning(HeadMessage)
+#                l.warning(Message)
+#                print HeadMessage+'\n'+Message
 
     if DstPort == 143:
         IMAPAuth = re.findall('(?<=LOGIN \")[^\r]*', decoded['data'])
